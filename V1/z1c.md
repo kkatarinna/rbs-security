@@ -108,7 +108,7 @@ Razlikuje se od OTP režima po tome što se šifra/token ne prikazuje korisniku.
 ## Integrisanje MFA na ELK okruženju
 Integracija MFA u ELK stack (Elasticsearch, Logstash, Kibana) se radi na nivou autentikacije korisnika
 
-Elastic Security (ranije X-Pack) nudi ugrađenu autentikaciju i autorizaciju.
+Elastic Security (ranije X-Pack) nudi ugrađenu **autentikaciju i autorizaciju.**
 Podržava različite izvore identiteta:
 * Native Elasticsearch users (lozinke)
 * LDAP / Active Directory
@@ -120,7 +120,7 @@ Podržava različite izvore identiteta:
     * Azure AD
 
 
-Toka autentikacije:
+**Toka autentikacije:**
 1. Korisnik pokuša da se prijavi u Kibana UI.
 2. Kibana preusmerava na IdP.
 3. IdP traži MFA (OTP, YubiKey, push notifikaciju, biometriju).
