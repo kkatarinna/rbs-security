@@ -106,7 +106,7 @@ Razlikuje se od OTP režima po tome što se šifra/token ne prikazuje korisniku.
     Neadekvatna implementacija HMAC verifikacije može omogućiti napadaču da generiše validne odgovore. 
 
 ## Integrisanje MFA na ELK okruženju
-Integracija MFA u ELK stack (Elasticsearch, Logstash, Kibana) se radi na nivou autentikacije korisnika
+Integracija MFA u ELK stack (Elasticsearch, Logstash, Kibana) se radi na nivou **autentikacije korisnika**
 
 Elastic Security (ranije X-Pack) nudi ugrađenu **autentikaciju i autorizaciju.**
 Podržava različite izvore identiteta:
