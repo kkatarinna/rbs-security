@@ -44,3 +44,10 @@ Ako server dozvoljava otpremanje fajlova koji se renderuju u browser-u (.html .s
 3. Izmeniti Content-Type post-a i ponovo poslati taj zahtev ![sent to repeater](./sc/send_post_to_repeater.png) ![change content-type](./sc/change_content_type.png) 
 4. Uveriti se da je zahtev uspesno poslat ![response](./sc/response_repeater_post.png)
 5. Procitati secret iz get zahteva ![get](./sc/get_response.png)
+
+### <span style="color:blue">Lab:</span> Web shell upload via path traversal
+1. Iz prethodne vezbe ponoviti korak 1. i 2. (koristiti isti web shell) 
+2. U get zahtevu se ne dobija secret vec se samo izpisuje sadrzaj ![ispis](./sc/3_ispis.png) Pronaci post zahtev i izmeniti filename u content-type-u ![path traversal](./sc/3_path_traversal.png) Vidimo da je u respons-u od posta odsecen string `../`
+3. Pokusati da se karakter `/` zameni sa `%2f` ![path url](./sc/3_url_path_traversal.png)
+Sada iz respons-a vidimo da je web shell uspesno sacuvan u fajlu iznad ![response](./sc/3_correct_response.png)
+4. Procitacemo secret iz get zahteva ![secret](./sc/3_secret.png)
