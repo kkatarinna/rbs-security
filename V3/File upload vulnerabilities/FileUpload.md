@@ -34,6 +34,13 @@ Ako server dozvoljava otpremanje fajlova koji se renderuju u browser-u (.html .s
 3. Iz Proxy > HTTP history na Burp-u pratiti zahteve koji se šalju.
 4. Definisati php web shell [Prikaži file.php](./file.php)
 5. Ulogovati se na lab vežbu sa datim kredencijalima (wiener:peter)
-6. Uploadovati web shell umesto svoje profilne slike [slika upload fajla](./sc/upload.png)
+6. Uploadovati web shell umesto svoje profilne slike ![slika upload fajla](./sc/upload.png)
 7. Vratiti se na svoj nalog nakon uspešnog otpremanja slike
-8. Pročitati response iz tajnog fajla [slika respons-a](./sc/upload.png)
+8. Pročitati response iz tajnog fajla ![slika respons-a](./sc/upload.png)
+
+### <span style="color:green">Lab:</span> Web shell upload via Content-Type restriction bypass
+1. Iz prethodne vezbe ponoviti sve od koraka 2 do koraka 6 (koristiti isti web shell)
+2. Pronaći post request koji nije uzpeo i poslati ga u repeater ![post](./sc/find_post_req.png) 
+3. Izmeniti Content-Type post-a i ponovo poslati taj zahtev ![sent to repeater](./sc/send_post_to_repeater.png) ![change content-type](./sc/change_content_type.png) 
+4. Uveriti se da je zahtev uspesno poslat ![response](./sc/response_repeater_post.png)
+5. Procitati secret iz get zahteva ![get](./sc/get_response.png)
