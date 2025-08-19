@@ -13,11 +13,11 @@ autentikacija, dokazivanje da ste vi korisnik za koji tvrdite da jeste, je mogu�
 
 problem dolazi kada korisnik probije autentikaciju, uspešno se predstavi kao neko ko nije, ili probije autorizaciju, radi akcije koje mu nisu dozvoljene
 
-### iskorištenje ovih ranjivosti može dovesti do velikih problema
+### Uspešan napad
  od pregleda podataka od strane korisnika koji ne bi smeo da ih vidi, širenje površine napada (pristupačnost više stranica omogućava više mogućnosti za napade), do odradjivanja akcija koji su destruktivni za sistem (izmena bitnih podataka ili celokupno brisanje)
 
 
-### ranjivosti koje dovode do uspeha ovog napada su
+### Ranjivosti koje dovode do uspeha ovog napada su
 - loša implementacija autorizacije
     - ne vrši se dovoljno dobra provera da li neki korisnik sme da odradi nešto
 
@@ -27,7 +27,7 @@ problem dolazi kada korisnik probije autentikaciju, uspešno se predstavi kao ne
     - baze gde se čuvaju šifre nisu dovoljno zaštićene 
 
 
-### primerene kontramere
+### Primerene kontramere
 - za bolju autorizaciju
     - potreban je sistem uloga ili bilo koji sistem za dodeljivanje dozvola odredjenim korisnicima ili grupama za neku akciju
     - neki sistemi: rbac, MAC, ABAC, PBAC, Rule-Based, ACL,
