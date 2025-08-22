@@ -51,3 +51,17 @@ Ako server dozvoljava otpremanje fajlova koji se renderuju u browser-u (.html .s
 3. Pokusati da se karakter `/` zameni sa `%2f` ![path url](./sc/3_url_path_traversal.png)
 Sada iz respons-a vidimo da je web shell uspesno sacuvan u fajlu iznad ![response](./sc/3_correct_response.png)
 4. Procitacemo secret iz get zahteva ![secret](./sc/3_secret.png)
+
+### <span style="color:blue">Lab:</span> Web shell upload via extension blacklist bypass
+1. Ponoviti iz prethodne vezbe koraj 1.
+2. Odpremiti [.htaccess fajl](./.htaccess) ![fajl](./sc/4_htaccess_upload.png)
+3. Izmeniti u post zahtevu da prilikom odpremanja `.htacces` fajla content-type bude text/plain 
+4. Nakon toga uploadovati file.php ali u post izmeniti da je ekstenzija ona iz `.htaccess` fajla (.evil) ![slika2](./sc/4_evil_upload.png)
+5. Prozitati iz get zahteva Karlosovu malu tajnu ![tajna](./sc/4_tajna.png)
+
+
+### <span style="color:blue">Lab:</span> Web shell upload via obfuscated file extension
+1. Ponoviti iz prethodne vezbe korak 1.
+2. Odpremiti [file.php falj](./file.php) ![upload](./sc/5_upload.png)
+3. Izmeniti post zahtev da filename u `Content-Disposition` bude drugačiji ![obfuscate](./sc/5_obfuscatejpg.png) ![obfuscate](./sc/5_obfuscated2.png) ![obfuscate](./sc/5_obfuscate_correct.png)
+4. Pricitati tajnu iz get zahteva ![secret](./sc/5_secret.png)
